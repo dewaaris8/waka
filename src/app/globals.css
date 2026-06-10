@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Memetakan utility class Tailwind ke CSS Variables yang dinamis */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-waka-dark: var(--brand-dark);
+  --color-waka-medium: var(--brand-medium);
+  --color-waka-light: var(--brand-light);
+}
+
+/* TEMA 1: Waka Hotels & Resorts Utama (Maroon khas W Style) */
+:root,
+.theme-resorts {
+  --brand-dark: #4a0e2e;
+  --brand-medium: #63123a;
+  --brand-light: #7d184a;
+}
+
+/* TEMA 2: WakaGangga Properti (Olive Green / Earthy Tone) */
+.theme-gangga {
+  --brand-dark: #4b5320;
+  --brand-medium: #616c29;
+  --brand-light: #778532;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
